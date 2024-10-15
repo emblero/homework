@@ -1,0 +1,16 @@
+services:
+  db:
+    image: 'postgres:alpine3.19'
+    container_name: db
+    environment:
+      POSTGRES_DB: spring
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin
+    ports:
+     - "5432:5432"
+    volumes:
+     - aston_task_2:/var/lib/postgresql/data
+
+volumes:
+  aston_task_2:
+    name: aston-task-2
